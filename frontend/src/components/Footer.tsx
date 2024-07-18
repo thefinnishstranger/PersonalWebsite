@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     const linkStyle = {
         color: 'white', 
         textDecoration: 'none',
-        transition: 'color 0.3 ease'
+        transition: 'color 0.3 ease', 
     }
 
     const MouseOver = (event) => {
@@ -30,22 +30,22 @@ const Footer: React.FC = () => {
                         <p>Email: <a href='mailto:nikolas.gustavson4@gmail.com' style={linkStyle} onMouseOver={MouseOver} onMouseLeave={MouseOut}>nikolas.gustavson4@gmail.com</a></p>
                         <p>Phone: <a href='tel:+14304370707' style={linkStyle} onMouseOver={MouseOver} onMouseLeave={MouseOut}>+1 (430) 437-0707</a></p>
                         <IconButton>
-                            <a href='https://instagram.com/nikolasgustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'white' }}>
+                            <a href='https://instagram.com/nikolasgustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'white', marginTop: -20, marginLeft: -11 }}>
                                 <InstagramIcon />
                             </a>
                         </IconButton>
                         <IconButton>
-                            <a href='https://github.com/thefinnishstranger' target='_blank' rel='noopener noreferrer' style={{ color: 'white' }}>
+                            <a href='https://github.com/thefinnishstranger' target='_blank' rel='noopener noreferrer' style={{ color: 'white', marginTop: -20 }}>
                                 <GitHubIcon />
                             </a>
                         </IconButton>
                         <IconButton>
-                            <a href='https://x.com/nikgustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'white' }}>
+                            <a href='https://x.com/nikgustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'white', marginTop: -20 }}>
                                 <XIcon />
                             </a>
                         </IconButton>
                         <IconButton>
-                            <a href='https://www.facebook.com/nikolas.gustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'white' }}>
+                            <a href='https://www.facebook.com/nikolas.gustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'white', marginTop: -20 }}>
                                 <FacebookIcon />
                             </a>
                         </IconButton>

@@ -12,5 +12,43 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.certificate-container {
+    padding: 15px; /* Space between frames */
+    display: flex;
+    justify-content: center;
+}
+
+.certificate-frame {
+    position: relative; /* Needed for positioning the ::after element */
+    border-top: 15px solid black;
+    border-right: 25px solid black;
+    border-left: 25px solid black;
+    border-bottom: 40px solid black; /* Thicker bottom border */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    padding: 0px; /* Space inside the frame */
+    background-color: #fff; /* Background color of the frame */
+    transition: transform 0.2s; /* Smooth transform effect */
+}
+
+.certificate-frame::after {
+    content: attr(data-text); /* Use the data-text attribute for content */
+    position: absolute;
+    bottom: -35px; /* Position it below the bottom border */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black; /* Match the bottom border color */
+    padding: 2px 5px; /* Padding around the text */
+    font-size: 18px; /* Text size */
+    color: white; /* Text color */
+    border-radius: 0 0 5px 5px; /* Optional: rounded corners on the bottom */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.certificate-frame:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
