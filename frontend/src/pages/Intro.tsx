@@ -1,46 +1,43 @@
-import { Container, Row, Col, Image } from "react-bootstrap"
-import profilePicture from '../resources/nikPhoto.jpeg'
-import basketballPhoto from '../resources/basketballPhoto.jpeg'
-import basketballPhoto1 from '../resources/basketballPhoto1.jpeg'
+import { Container, Row, Col, Image } from "react-bootstrap";
+import profilePicture from '../resources/nikPhoto.jpeg';
+import basketballPhoto from '../resources/basketballPhoto.jpeg';
+import basketballPhoto1 from '../resources/basketballPhoto1.jpeg';
+import '../intro.css';
 
 const Intro: React.FC = () => {
-
     return (
-        <Container className="mt-4">
-            <Row className="align-items-center">
-                <Col xs={6} md={5} className="text-center">
-                    <Image src={profilePicture} alt="Nikolas Gustavson standing by a building" roundedCircle fluid className="profile-picture w-75" />
+        <Container fluid className="intro-container">
+            <Row className="justify-content-center align-items-center text-center text-light intro-header">
+                <Col md={6} className="mb-4">
+                    <Image src={profilePicture} alt="Nikolas Gustavson" roundedCircle className="profile-picture" />
                 </Col>
-                <Col xs={6} md={7}>
-                    <h2>Welcome to my website!</h2>
-                    <p>
-                    Hello there! My name is Nikolas Gustavson, and I am currently a student-athlete at the University of Texas at Tyler. I am pursuing a degree in Computer Science while competing at the NCAA Division 2 level. I aspire to become a Full Stack Engineer and am eagerly looking forward to breaking into the industry upon graduation.
+                <Col md={6} className="d-flex flex-column justify-content-center">
+                    <h1 className="intro-title">Welcome to My World!</h1>
+                    <p className="intro-container-text">
+                        Hi, I'm Nikolas Gustavson, a student-athlete at the University of Texas at Tyler, majoring in Computer Science. I compete at the NCAA Division 2 level and aim to become a Full Stack Engineer. I’m excited about diving into the tech industry post-graduation.
                     </p>
                 </Col>
             </Row>
-            <Row>
-                <Col xs={6} md={7}>
-                    <h3>About me</h3>
-                    <p>
-                        I was born and raised in Helsinki, Finland, a country in Northern Europe. Growing up, I never imagined that I would end up in the United States, studying and playing basketball simultaneously. Yet, here I am. My life has always revolved around basketball, which ultimately led me to the US. Following in my brother's footsteps, I began my collegiate journey in Torrington, Wyoming, at Eastern Wyoming College, a junior college in a small town.
+            <Row className="mt-5">
+                <Col md={12} className="text-center">
+                    <h2 className="intro-subtitle">About Me</h2>
+                    <p className="intro-text">
+                        I hail from Helsinki, Finland, and my passion for basketball led me to the U.S. I began my collegiate journey at Eastern Wyoming College and later transferred to the University of North Alabama, and now, the University of Texas at Tyler.
                     </p>
-                    <p>
-                        Despite the challenges, I embraced my time there, studying math, one of my favorite subjects. After earning my Associate's Degree, I realized my passion for Computer Science, having taken a few CS classes. This interest led me to the University of North Alabama, where I pursued a Computer Science degree. However, after a year, I transferred to the University of Texas at Tyler to continue my education and basketball career.
+                    <p className="intro-text">
+                        After earning my Associate's Degree and discovering my passion for Computer Science, I am now set to graduate with my Bachelor's degree next year. My journey has included working with Java, C++, and more recently, React and Node.js.
                     </p>
-                    <p>
-                        Despite some setbacks that delayed my graduation, I remained determined. I am now set to graduate with my Bachelor's degree next year and plan to pursue a Master's degree thereafter. Throughout my academic journey, I have primarily used Java and C++ for programming. Recently, I have developed a keen interest in React and Node.js, leveraging the Full Stack Open course from the University of Helsinki to learn these new technologies.
-                    </p>
-                    <p>
-                        I am passionate about learning and eagerly embrace new technologies and frameworks. I am excited to apply my skills and learning habits in real-world projects and look forward to contributing to innovative solutions in the software engineering field.
+                    <p className="intro-text">
+                        I'm always eager to learn and embrace new technologies. I look forward to making impactful contributions in the software engineering field.
                     </p>
                 </Col>
-                <Col xs={6} md={5}>
-                    <Image src={basketballPhoto} alt="me dribbling a basketball" rounded fluid className="basketball-photo w-100"/>
-                    <Image src={basketballPhoto1} alt="me shooting a basketball" rounded fluid className="basketball-photo w-100"/>
+                <Col md={12} className="d-flex justify-content-center mt-4">
+                    <Image src={basketballPhoto} alt="Nikolas playing basketball" rounded className="basketball-photo mx-2" />
+                    <Image src={basketballPhoto1} alt="Nikolas shooting a basketball" rounded className="basketball-photo mx-2" />
                 </Col>
             </Row>
         </Container>
-    )
+    );
 }
 
-export default Intro
+export default Intro;

@@ -1,54 +1,302 @@
-.profile-picture {
+  * {
+    font-family: 'Arvo', serif;
+  }
 
+  .intro-container {
+    padding: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.profile-picture {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure the image covers the given dimensions */
+}
+
+.intro-title, .intro-subtitle {
+    font-weight: bold;
+    color: #333;
+}
+
+.intro-text {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
 .basketball-photo {
-    
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        padding: 10px;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .intro-title, .intro-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+}
+  
+.certificate-container {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.certificate-container:hover {
+    transform: scale(1.10);
+}
+
+.portfolio-frame {
+    border-top: 5px solid lightslategray;
+    border-right: 5px solid lightslategray;
+    border-left: 5px solid lightslategray;
+    border-bottom: 10px solid lightslategray;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px black;
+    transition: transform 0.2s;
+}
+
+.portfolio-frame:hover {
+    transform: scale(1.08);
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.content-wrapper {
+    padding-top: 80px;
+}
+
+.custom-navbar .nav-link {
+    color: black !important;
+    padding-left: 10px;
+    border-radius: 30px;
+    transition: transform 0.4s, background-color 0.4s;
+}
+
+.custom-navbar .nav-link:hover {
+    color: black !important;
+    background-color: grey;
+    border-radius: 30px;
+    transform: scale(1.10);
 }
 
 .footer {
-    margin-top: 20px;
-    text-align: center;
+    border-top: 1px solid lightgrey;
+    box-shadow: 0 4px 8px black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #faf4f6
 }
 
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.skills-container {
+    margin-top: 80px;
 }
 
-.certificate-container {
-    padding: 15px; /* Space between frames */
-    display: flex;
-    justify-content: center;
-}
-
-.certificate-frame {
-    position: relative; /* Needed for positioning the ::after element */
-    border-top: 15px solid black;
-    border-right: 25px solid black;
-    border-left: 25px solid black;
-    border-bottom: 40px solid black; /* Thicker bottom border */
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
-    padding: 0px; /* Space inside the frame */
-    background-color: #fff; /* Background color of the frame */
-    transition: transform 0.2s; /* Smooth transform effect */
-}
-
-.certificate-frame::after {
-    content: attr(data-text); /* Use the data-text attribute for content */
-    position: absolute;
-    bottom: -35px; /* Position it below the bottom border */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black; /* Match the bottom border color */
-    padding: 2px 5px; /* Padding around the text */
-    font-size: 18px; /* Text size */
-    color: white; /* Text color */
-    border-radius: 0 0 5px 5px; /* Optional: rounded corners on the bottom */
-    font-family: Arial, Helvetica, sans-serif;
+.section-title {
+    font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
-.certificate-frame:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    margin-bottom: 10px;
+}
+
+.additional-skills {
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.custom-navbar .home-link {
+    margin: 10px;
+    color: black;
+    transition: transform 0.4s, color 0.4s;
+}
+
+.custom-navbar .home-link:hover {
+    color: grey;
+    transform: scale(1.05);
+}
+
+.nav-bar-collapse {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.custom-navbar-bg {
+    background-color: #faf4f6;
+}
+
+.custom-navbar {
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 2px 7px black;
+}
+
+.MyCustomButton:hover {
+    background-color: inherit !important;
+    transform: scale(1.10);
+  }
+
+.linkStyle {
+    color: black; 
+    text-decoration: none;
+    transition: transform 0.4s, color 0.3s;
+}
+
+.resume-link {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.resume-link:hover {
+    color: grey;
+    transform: scale(1.05);
+}
+
+.basketball-card {
+    transition: transform 0.4s;
+}
+
+.basketball-card:hover {
+    transform: scale(1.05);
+}
+
+.carousel .carousel-control { visibility: hidden; }
+.carousel:hover .carousel-control { visibility: visible; }
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next
+{
+    visibility: hidden;
+    opacity: 1;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next
+{
+    visibility: visible;
+    animation-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.carousel:hover .carousel-control-prev
+{
+    animation-name: FadeInPrev;
+}
+
+.carousel:hover .carousel-control-next
+{
+    animation-name: FadeInNext;
+}
+
+@keyframes FadeInPrev
+{
+    0%
+    {
+        opacity: 0;
+        padding-left: 40px;
+    }
+    100%
+    {
+        opacity: 1;
+        padding-left: 0px;
+    }
+}
+
+@keyframes FadeInNext
+{
+    0%
+    {
+        opacity: 0;
+        padding-right: 40px;
+    }
+    100%
+    {
+        opacity: 1;
+        padding-right: 0px;
+    }
+}
+
+.contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.contactForm div {
+    margin-bottom: 15px;
+}
+
+.contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contactForm textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contactForm input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contactForm input[type="submit"]:hover {
+    background-color: #0056b3;
 }

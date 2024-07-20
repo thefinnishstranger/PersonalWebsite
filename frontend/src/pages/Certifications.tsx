@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Card } from "react-bootstrap";
 import fullstack from '../resources/certificate-fullstack-2.png';
 import graphQL from '../resources/certificate-graphql.png';
 import typescript from '../resources/certificate-typescript.png';
@@ -21,76 +21,128 @@ const Certifications: React.FC = () => {
     const javascriptUrl = 'https://freecodecamp.org/certification/theFinnishStranger/javascript-algorithms-and-data-structures-v8';
     const librariesUrl = 'https://freecodecamp.org/certification/theFinnishStranger/front-end-development-libraries';
 
+    const linkStyle = {
+        textDecoration: 'none',
+        color: 'black'
+    }
+
     return (
         <Container>
-            <Row>
-                <h1>My Certifications</h1>
-                <Col md={4} className="certificate-container">
-                    <a href={fullstackUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="Fullstack">
-                            <Image src={fullstack} alt="certificate" fluid />
-                        </div>
-                    </a>
-                </Col>
-                <Col md={4} className="certificate-container">
-                    <a href={graphQLUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="GraphQL">
-                            <Image src={graphQL} alt="certificate" fluid />
-                        </div>
-                    </a>
-                </Col>
-                <Col md={4} className="certificate-container">
-                    <a href={typescriptUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="TypeScript">
-                            <Image src={typescript} alt="certificate" fluid />
-                        </div>
-                    </a>
+            <Row className="my-5">
+                <Col>
+                    <h1 className="text-center">My Certifications</h1>
                 </Col>
             </Row>
             <Row>
                 <Col md={4} className="certificate-container">
-                    <a href={reactNativeUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="React Native">
-                            <Image src={reactNative} alt="certificate" fluid />
-                        </div>
+                    <Card>
+                    <a href={fullstackUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={fullstack} alt="certificate" />
+                        <Card.Body>
+                            <Card.Title className="text-center">Fullstack Web Development</Card.Title>
+                        </Card.Body>
                     </a>
+                </Card>
                 </Col>
                 <Col md={4} className="certificate-container">
-                    <a href={CIUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="CI/CD">
-                            <Image src={CI} alt="certificate" fluid />
-                        </div>
+                    <Card>
+                    <a href={graphQLUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={graphQL} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    GraphQL
+                                </Card.Title>
+                            </Card.Body>
                     </a>
+                    </Card>
                 </Col>
                 <Col md={4} className="certificate-container">
-                    <a href={containersUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="Containers">
-                            <Image src={containers} alt="certificate" fluid />
-                        </div>
+                    <Card>
+                    <a href={typescriptUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={typescript} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    TypeScript
+                                </Card.Title>
+                            </Card.Body>
                     </a>
+                    </Card>
                 </Col>
             </Row>
             <Row>
                 <Col md={4} className="certificate-container">
-                    <a href={webDesignUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="Web Design">
-                            <Image src={webDesign} alt="certificate" fluid />
-                        </div>
+                    <Card>
+                    <a href={reactNativeUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={reactNative} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    React Native
+                                </Card.Title>
+                            </Card.Body>
                     </a>
+                    </Card>
                 </Col>
                 <Col md={4} className="certificate-container">
-                    <a href={javascriptUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="JavaScript">
-                            <Image src={javascript} alt="certificate" fluid />
-                        </div>
+                    <Card>
+                    <a href={CIUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={CI} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    CI/CD
+                                </Card.Title>
+                            </Card.Body>
                     </a>
+                    </Card>
                 </Col>
                 <Col md={4} className="certificate-container">
-                    <a href={librariesUrl} target="_blank" rel="noopener noreferrer">
-                        <div className="certificate-frame" data-text="Libraries">
-                            <Image src={libraries} alt="certificate" fluid />
-                        </div>
+                    <Card>
+                    <a href={containersUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={containers} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    Containers
+                                </Card.Title>
+                            </Card.Body>
                     </a>
+                    </Card>
+                </Col>
+            </Row>
+            <Row>
+                <Col md={4} className="certificate-container">
+                    <Card>
+                    <a href={webDesignUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={webDesign} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    Web Design
+                                </Card.Title>
+                            </Card.Body>
+                    </a>
+                    </Card>
+                </Col>
+                <Col md={4} className="certificate-container">
+                    <Card>
+                    <a href={javascriptUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={javascript} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    JavaScript
+                                </Card.Title>
+                            </Card.Body>
+                    </a>
+                    </Card>
+                </Col>
+                <Col md={4} className="certificate-container">
+                    <Card>
+                    <a href={librariesUrl} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            <Card.Img variant="top" src={libraries} alt="certificate" />
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                    Frontend libraries
+                                </Card.Title>
+                            </Card.Body>
+                    </a>
+                    </Card>
                 </Col>
             </Row>
         </Container>

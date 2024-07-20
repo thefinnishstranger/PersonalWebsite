@@ -1,0 +1,55 @@
+.intro-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+.intro-header {
+    background-color: #343a40;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 5px !important;
+}
+
+.profile-picture {
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white !important;
+    margin-bottom: 20px;
+}
+
+.intro-container-text {
+    font-size: 1.1rem;
+    color: #e9ecef;
+    line-height: 1.6;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.intro-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #343a40;
+    line-height: 1.6;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.basketball-photo {
+    width: 40% !important;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
