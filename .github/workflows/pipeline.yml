@@ -11,8 +11,10 @@ on:
 jobs:
   pipeline:
     runs-on: ubuntu-latest
+    concurrency: deploy-group
     steps:
       - uses: actions/checkout@v4
+      - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: Install dependencies
         run: npm install
         working-directory: ./frontend
@@ -26,6 +28,12 @@ jobs:
       - name: Wait for the frontend to start
         run: sleep 10
 
+      - name: Deploy the app
+        run: flyctl deploy --remote-only
+        working-directory: ./frontend
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          
       - name: The job has succeeded
         if: ${{ success() }}
         run: echo "Success!"
