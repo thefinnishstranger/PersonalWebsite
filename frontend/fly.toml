@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for personal-website-nik on 2024-07-21T20:46:39+03:00
+# fly.toml app configuration file generated for personal-website-nik-restless-dew-7542 on 2024-07-21T21:54:10+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'personal-website-nik'
+app = 'personal-website-nik-restless-dew-7542'
 primary_region = 'arn'
 
 [build]
