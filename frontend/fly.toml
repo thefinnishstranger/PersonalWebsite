@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for frontend-shy-pine-9286 on 2024-07-21T19:11:36+03:00
+# fly.toml app configuration file generated for frontend-ancient-wildflower-7417 on 2024-07-21T19:26:22+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'frontend-shy-pine-9286'
+app = 'frontend-ancient-wildflower-7417'
 primary_region = 'arn'
 
 [build]

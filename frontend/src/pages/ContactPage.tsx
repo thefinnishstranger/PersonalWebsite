@@ -4,11 +4,12 @@ import toast, { Toaster } from 'react-hot-toast';
 import '../main.css'
 
 const ContactPage = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (form.current) {
     emailjs
       .sendForm('service_09rwj9a', 'template_ptjdigb', form.current, {
         publicKey: 'ozg7ccJjhSa3woNe9',
@@ -44,7 +45,8 @@ const ContactPage = () => {
           })
         },
       );
-  };
+  }
+}
 
   return (
     <form ref={form} onSubmit={sendEmail} className='contactForm'>

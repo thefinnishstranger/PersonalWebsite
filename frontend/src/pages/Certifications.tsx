@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, Card } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import fullstack from '../resources/certificate-fullstack-2.png';
 import graphQL from '../resources/certificate-graphql.png';
 import typescript from '../resources/certificate-typescript.png';
