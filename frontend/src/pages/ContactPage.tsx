@@ -9,7 +9,7 @@ const ContactPage = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (form.current) {
+    if (form.current && form.current) {
     emailjs
       .sendForm('service_09rwj9a', 'template_ptjdigb', form.current, {
         publicKey: 'ozg7ccJjhSa3woNe9',
@@ -17,7 +17,9 @@ const ContactPage = () => {
       .then(
         () => {
           console.log('SUCCESS!');
-          e.target.reset()
+          if (form.current) {
+            form.current.reset()
+          }
           toast('Message sent successfully', {
             duration: 4000,
             position: 'top-right',
@@ -52,15 +54,15 @@ const ContactPage = () => {
     <form ref={form} onSubmit={sendEmail} className='contactForm'>
     <div>
         <label>Name</label>
-        <input type="text" name="user_name" />
+        <input type="text" name="user_name" required />
     </div>
     <div>
         <label>Email</label>
-        <input type="email" name="user_email" />
+        <input type="email" name="user_email" required />
         </div>
     <div>
         <label>Message</label>
-        <textarea name="message" />
+        <textarea name="message" required />
     </div>
     <input type="submit" value="Send" />
     <Toaster />
