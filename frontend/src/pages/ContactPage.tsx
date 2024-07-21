@@ -47,7 +47,7 @@ const ContactPage = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className='contactForm mt-5'>
+    <form ref={form} onSubmit={sendEmail} className='contactForm'>
     <div>
         <label>Name</label>
         <input type="text" name="user_name" />

@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
                     <Col>
                         <h1 className='text-center section-title'>My Resume</h1>
                         <p className='text-center'>
-                            <a href='/cv2024.pdf' download className='linkStyle resume-link'><strong>Download my resume</strong></a>
+                            <a href='/cv2024-7.pdf' download className='linkStyle resume-link'><strong>Download my resume</strong></a>
                         </p>
                     </Col>
                 </Row>
@@ -176,13 +176,7 @@ const Resume: React.FC = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <Card>
-                            <Card.Body>
-                                <Card.Title>Languages and Technologies</Card.Title>
-                                <Card.Text>
-                                    <Container>
-                                        <Row>
-                                            <Col md={4}>
+                    
                                                 <Card className='mb-4'>
                                                     <Card.Body>
                                                         <Card.Title>Languages</Card.Title>
@@ -246,13 +240,7 @@ const Resume: React.FC = () => {
                                                         </Card.Text>
                                                     </Card.Body>
                                                 </Card>
-                                            </Col>
-                                        </Row>
-                                    </Container>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                                     </Col>
                 </Row>
             </Container>
         </div>

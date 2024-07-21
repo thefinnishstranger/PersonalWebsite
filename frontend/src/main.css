@@ -4,14 +4,19 @@
 
   .intro-container {
     padding: 20px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .profile-picture {
-    width: 200px; /* Fixed width */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Ensure the image covers the given dimensions */
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+    transition: transform 0.4s;
 }
+
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
 
 .intro-title, .intro-subtitle {
     font-weight: bold;
@@ -28,12 +33,17 @@
 .basketball-photo {
     width: 100%;
     height: auto;
+    transition: transform 0.4s;
+}
+
+.basketball-photo:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
     .intro-container {
         padding: 10px;
-    }
+    }frontend/src/resources/blogAppPhoto.png
 
     .profile-picture {
         width: 150px;
@@ -46,6 +56,15 @@
 
     .intro-text {
         font-size: 0.9rem;
+    }
+
+    .skill-card {
+        margin-top: 25px;
+    }
+
+    .contactForm {
+        background-color: #fff !important;
+        box-shadow: 0 0 0 !important;
     }
 }
   
@@ -67,11 +86,11 @@
     border-bottom: 10px solid lightslategray;
     border-radius: 20px;
     box-shadow: 0 4px 8px black;
-    transition: transform 0.2s;
+    transition: transform 0.4s;
 }
 
 .portfolio-frame:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .card-body {
@@ -79,13 +98,11 @@
 }
 
 .card-title {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
 }
 
 .card-text {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
 
@@ -135,6 +152,14 @@
     margin-bottom: 10px;
 }
 
+.skill-card {
+    transition: transform 0.4s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
 .additional-skills {
     margin-top: 30px;
     font-size: 1.1rem;
@@ -168,6 +193,7 @@
 .MyCustomButton:hover {
     background-color: inherit !important;
     transform: scale(1.10);
+    
   }
 
 .linkStyle {
@@ -256,7 +282,6 @@
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
 }
 
 .contactForm div {

@@ -3,6 +3,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { IconButton } from '@mui/material';
 import '../main.css'
 import { useLocation } from 'react-router-dom';
@@ -44,7 +45,12 @@ const Footer: React.FC = () => {
                         <p>Email: <a href='mailto:nikolas.gustavson4@gmail.com' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>nikolas.gustavson4@gmail.com</a></p>
                         <p>Phone: <a href='tel:+14304370707' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>+1 (430) 437-0707</a></p>
                         <IconButton className={'MyCustomButton'}>
-                            <a href='https://instagram.com/nikolasgustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'black', marginTop: -20, marginLeft: -11 }}>
+                            <a href='https://www.linkedin.com/in/ngustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'black', marginTop: -20, marginLeft: -11 }}>
+                                <LinkedInIcon />
+                            </a>
+                        </IconButton>
+                        <IconButton className={'MyCustomButton'}>
+                            <a href='https://instagram.com/nikolasgustavson' target='_blank' rel='noopener noreferrer' style={{ color: 'black', marginTop: -20 }}>
                                 <InstagramIcon />
                             </a>
                         </IconButton>

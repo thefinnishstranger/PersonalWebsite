@@ -6,7 +6,6 @@ import ewcLogo from '../resources/ewcLogo.jpg';
 import unaLogo from '../resources/unaLogo.png';
 import uttLogo from '../resources/uttLogo.png';
 
-// Styled component for education entries
 const EducationEntry = styled(Box)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
@@ -22,15 +21,19 @@ const EducationEntry = styled(Box)(({ theme }) => ({
     textAlign: 'center',
     minHeight: 350,
     minWidth: '100%',
+    [theme.breakpoints.down('sm')]: {
+        padding: theme.spacing(2),
+        
+    }
 }));
 
 const Education: React.FC = () => {
     return (
         <Container sx={{ mt: 8 }}>
-            <Typography variant='h2' align='center' gutterBottom>
+            <Typography variant='h3' align='center' gutterBottom>
                 Education
             </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3 }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3 }} className='education-box'>
                 {[
                     {
                         name: "University of Texas at Tyler",

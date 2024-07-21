@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import '../main.css'; // Assuming you have a separate CSS file for styles
+import '../main.css';
 
 const Skills: React.FC = () => {
     return (
@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
             <h2 className="text-center section-title">Skills</h2>
             <Row>
                 <Col md={4}>
-                    <Card>
+                    <Card className='skill-card'>
                         <Card.Body>
                             <Card.Title>Languages</Card.Title>
                             <Card.Text>
@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
                     </Card>
                 </Col>
                 <Col md={4}>
-                    <Card>
+                    <Card className='skill-card'>
                         <Card.Body>
                             <Card.Title>Tools & IDEs</Card.Title>
                             <Card.Text>
@@ -52,7 +52,7 @@ const Skills: React.FC = () => {
                     </Card>
                 </Col>
                 <Col md={4}>
-                    <Card>
+                    <Card className='skill-card'>
                         <Card.Body>
                             <Card.Title>Additional Skills</Card.Title>
                             <Card.Text>
