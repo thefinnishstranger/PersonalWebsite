@@ -10,6 +10,7 @@ import Certifications from './pages/Certifications';
 import Basketball from './pages/Basketball';
 import ContactPage from './pages/ContactPage';
 import './main.css';
+import ScrollToTop from './components/ScrollToTop';
 
 const MainRouter: React.FC = () => {
     const [expanded, setExpanded] = useState(false);
@@ -87,16 +88,18 @@ const MainRouter: React.FC = () => {
                 </Navbar.Collapse>
             </Navbar>
             <div className='content-wrapper'>
-                <Routes>
-                    <Route path="/" element={<Intro />} />
-                    <Route path="/portfolio" element={<Portfolio />} />
-                    <Route path="/skills" element={<Skills />} />
-                    <Route path="/education" element={<Education />} />
-                    <Route path="/resume" element={<Resume />} />
-                    <Route path="/certifications" element={<Certifications />} />
-                    <Route path="/basketball" element={<Basketball />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                </Routes>
+                <ScrollToTop>
+                    <Routes>
+                        <Route path="/" element={<Intro />} />
+                        <Route path="/portfolio" element={<Portfolio />} />
+                        <Route path="/skills" element={<Skills />} />
+                        <Route path="/education" element={<Education />} />
+                        <Route path="/resume" element={<Resume />} />
+                        <Route path="/certifications" element={<Certifications />} />
+                        <Route path="/basketball" element={<Basketball />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                    </Routes>
+                </ScrollToTop>
             </div>
         </>
     );
