@@ -8,6 +8,7 @@ import { IconButton } from '@mui/material';
 import '../main.css'
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
     const [toHomeLink, setToHomeLink] = useState('/')
@@ -72,26 +73,26 @@ const Footer: React.FC = () => {
                     </Col>
                     <Col md={2} className=''>
                         <ul className='list-unstyled'>
-                            <li><a href='/' className='linkStyle' onClick={handleClick} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Home</a></li>
-                            <li><a href='/portfolio' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Portfolio</a></li>
+                            <li><Link to={toHomeLink} className='linkStyle' onClick={handleClick} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Home</Link></li>
+                            <li><Link to='/portfolio' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Portfolio</Link></li>
                         </ul>
                     </Col>
                     <Col md={2} className=''>
                         <ul className='list-unstyled'>
-                            <li><a href='/skills' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Skills</a></li>
-                            <li><a href='/education' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Education</a></li>
+                            <li><Link to='/skills' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Skills</Link></li>
+                            <li><Link to='/education' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Education</Link></li>
                         </ul>
                     </Col>
                     <Col md={2} className=''>
                         <ul className='list-unstyled'>
-                            <li><a href='/resume' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Resume</a></li>
-                            <li><a href='/certifications' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Certifications</a></li>
+                            <li><Link to='/resume' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Resume</Link></li>
+                            <li><Link to='/certifications' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Certifications</Link></li>
                         </ul>
                     </Col>
                     <Col md={2} className=''>
                         <ul className='list-unstyled'>
-                            <li><a href='/basketball' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Basketball</a></li>
-                            <li><a href='/contact' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Contact me</a></li>
+                            <li><Link to='/basketball' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Basketball</Link></li>
+                            <li><Link to='/contact' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>Contact me</Link></li>
                         </ul>
                     </Col>
                 </Row>
