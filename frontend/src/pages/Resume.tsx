@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
                     <Col>
                         <h1 className='text-center section-title'>My Resume</h1>
                         <p className='text-center'>
-                            <a href='/cv2024-7.pdf' download className='linkStyle resume-link'><strong>Download my resume</strong></a>
+                            <a href='/cv2024-8.pdf' download className='linkStyle resume-link'><strong>Download my resume</strong></a>
                         </p>
                     </Col>
                 </Row>
@@ -155,7 +155,7 @@ const Resume: React.FC = () => {
                                         <li>
                                             <strong>Helsinki University</strong>
                                             <ul>
-                                                <li>Assistant for my mother. Responsibilities included helping everyone, managing the storage room, printing papers, and working on a nationwide project. This job involved checking and reviewing texts, coping with sudden changes and problems, and taking responsibility in the storage room.</li>
+                                                <li>Assistant to a Project Manager: Supported the execution of a nationwide project, contributing to its successful completion.</li>
                                             </ul>
                                         </li>
                                         <li>
