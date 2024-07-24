@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import BlogAppPicture from '../resources/blogAppPhoto.png';
+import BlogAppPicture from '../resources/newBlogHub.png';
 import PersonalWebsitePhoto from '../resources/newPersonalWebsitePhoto.png';
 import '../main.css';
 
