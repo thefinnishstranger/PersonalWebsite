@@ -64,13 +64,14 @@ Welcome to my personal website! This project showcases my skills and experience 
    ```bash
    npm run dev
 
-  The development server will start on http://localhost:3000
+  The development server will start on `http://localhost:3000`
 
 ## Deployment
 
-The website is continuously integrated and deployed using GitHub Workflows. Changes pushed to the main branch are automatically built and deployed. You can view the live website at [nikolasgustavson.com](nikolasgustavson.com)
+The website is continuously integrated and deployed using GitHub Workflows. Changes pushed to the main branch are automatically built and deployed. You can view the live website at [nikolasgustavson.com](https://nikolasgustavson.com)
 
-Contributing
+## Contributing
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/YourFeature`)
 3. Commit your changes (`git commit -m 'Add some feature'`)
