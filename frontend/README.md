@@ -61,7 +61,7 @@ Welcome to my personal website! This project showcases my skills and experience 
 
 ## Running locally
 
-1. **Start the development server:
+1. **Start the development server:**
    ```bash
    npm run dev
 
@@ -71,7 +71,8 @@ Welcome to my personal website! This project showcases my skills and experience 
 
 The website is continuously integrated and deployed using GitHub Workflows. Changes pushed to the main branch are automatically built and deployed. You can view the live website at [nikolasgustavson.com](nikolasgustavson.com)
 
-Contributing
+## Contributing
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/YourFeature`)
 3. Commit your changes (`git commit -m 'Add some feature'`)
