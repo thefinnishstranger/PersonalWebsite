@@ -82,7 +82,6 @@ const MainRouter: React.FC = () => {
                         <Nav.Link as={Link} to='/education' onClick={handleLinkClick} className='nav-link'>Education</Nav.Link>
                         <Nav.Link as={Link} to='/certifications' onClick={handleLinkClick} className='nav-link'>Certifications</Nav.Link>
                         <Nav.Link as={Link} to='/basketball' onClick={handleLinkClick} className='nav-link'>Basketball</Nav.Link>
-                        <Nav.Link as={Link} to='/contact' onClick={handleLinkClick} className='nav-link'>Contact me</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

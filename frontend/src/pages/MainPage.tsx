@@ -10,10 +10,10 @@ const MainPage: React.FC = () => {
     return (
         <div>
             <Intro />
+            <AboutMe />
             <Portfolio />
             <Certifications />
             <Education />
-            <AboutMe />
             <Basketball />
             <ContactPage />
         </div>
