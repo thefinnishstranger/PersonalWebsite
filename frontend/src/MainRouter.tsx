@@ -11,6 +11,7 @@ import Basketball from './pages/Basketball';
 import ContactPage from './pages/ContactPage';
 import './main.css';
 import ScrollToTop from './components/ScrollToTop';
+import MainPage from './pages/MainPage'
 
 const MainRouter: React.FC = () => {
     const [expanded, setExpanded] = useState(false);
@@ -78,9 +79,7 @@ const MainRouter: React.FC = () => {
                     <Nav className="mr-auto nav-bar-collapse w-100 justify-content-between">
                         <Nav.Link as={Link} to='/' onClick={handleLinkClick} className='nav-link'>Home</Nav.Link>
                         <Nav.Link as={Link} to='/portfolio' onClick={handleLinkClick} className='nav-link'>Portfolio</Nav.Link>
-                        <Nav.Link as={Link} to='/skills' onClick={handleLinkClick} className='nav-link'>Skills</Nav.Link>
                         <Nav.Link as={Link} to='/education' onClick={handleLinkClick} className='nav-link'>Education</Nav.Link>
-                        <Nav.Link as={Link} to='/resume' onClick={handleLinkClick} className='nav-link'>Resume</Nav.Link>
                         <Nav.Link as={Link} to='/certifications' onClick={handleLinkClick} className='nav-link'>Certifications</Nav.Link>
                         <Nav.Link as={Link} to='/basketball' onClick={handleLinkClick} className='nav-link'>Basketball</Nav.Link>
                         <Nav.Link as={Link} to='/contact' onClick={handleLinkClick} className='nav-link'>Contact me</Nav.Link>
@@ -90,7 +89,7 @@ const MainRouter: React.FC = () => {
             <div className='content-wrapper'>
                 <ScrollToTop>
                     <Routes>
-                        <Route path="/" element={<Intro />} />
+                        <Route path="/" element={<MainPage />} />
                         <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/skills" element={<Skills />} />
                         <Route path="/education" element={<Education />} />

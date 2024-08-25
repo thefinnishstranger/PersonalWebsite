@@ -15,6 +15,11 @@ import '../main.css';
 const Basketball: React.FC = () => {
     return (
         <Container>
+            <Row className="my-5">
+                <Col>
+                    <h1 className="text-center">Basketball</h1>
+                </Col>
+            </Row>
             <Row>
                 <Col xs={12} md={12} lg={6} className="p-4">
                     <Card className="basketball-card">
