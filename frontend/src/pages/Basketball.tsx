@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
+import { Typography } from '@mui/material';
 import childhoodPhoto from '../resources/childhoodBasketball.png';
 import childhoodPhoto2 from '../resources/childhoodPhoto2.png';
 import familyPhoto from '../resources/familyPhoto.jpeg';
@@ -14,11 +15,11 @@ import '../main.css';
 
 const Basketball: React.FC = () => {
     return (
-        <Container>
-            <Row className="my-5">
-                <Col>
-                    <h1 className="text-center">Basketball</h1>
-                </Col>
+        <Container id='basketball'>
+            <Row className="mt-5">
+            <Typography variant='h4' align='center' gutterBottom>
+                Basketball
+            </Typography>
             </Row>
             <Row>
                 <Col xs={12} md={12} lg={6} className="p-4">

@@ -1,9 +1,27 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { Link } from 'react-router-dom';
 import profilePicture from '../resources/nikPhoto2.png'
 import '../intro.css';
+import { useNavigate } from "react-router-dom";
 
 const Intro: React.FC = () => {
+    const navigate = useNavigate();
+
+    const onNavClick = (path: string, elementId: string) => {
+        navigate(path);
+    
+        const element = document.getElementById(elementId);
+        const navbarHeight = document.querySelector('.custom-navbar')?.clientHeight || 0;
+    
+        if (element) {
+            const elementPosition = element.getBoundingClientRect().top + window.screenY;
+            window.scrollTo({
+                top: elementPosition - navbarHeight,
+                behavior: 'smooth'
+            })
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
     return (
         <Container className="intro-container" fluid>
             <Row className="justify-content-center align-items-center text-center full-height">
@@ -14,7 +32,9 @@ const Intro: React.FC = () => {
                     <p className="intro-text">
                         Hello, I am a Full Stack Web Developer <i className="wave-emoji">👋</i>
                     </p>
-                    <Link to='/contact'><button className="connect-button">Let's Connect</button></Link>
+                    <a onClick={() => onNavClick('/contact', 'contact')} className='nav-link'>
+                        <button className="connect-button">Let's Connect</button>
+                    </a>
                     <div>
                         <p className="tech-stack">
                             My tech stack:

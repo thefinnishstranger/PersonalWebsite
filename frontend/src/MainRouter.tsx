@@ -1,36 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
-import Intro from './pages/Intro';
-import Portfolio from './pages/Portfolio';
-import Skills from './pages/Skills';
-import Education from './pages/Education';
-import Resume from './pages/Resume';
-import Certifications from './pages/Certifications';
-import Basketball from './pages/Basketball';
-import ContactPage from './pages/ContactPage';
 import './main.css';
-import ScrollToTop from './components/ScrollToTop';
 import MainPage from './pages/MainPage'
 
 const MainRouter: React.FC = () => {
     const [expanded, setExpanded] = useState(false);
-    const [homeLink, setHomeLink] = useState('/');
     const navbarRef = useRef<HTMLDivElement | null>(null);
+    const navigate = useNavigate()
 
     const handleLinkClick = () => {
         setExpanded(false);
     };
-
-    const location = useLocation();
-
-    useEffect(() => {
-        if (location.pathname === '/') {
-            setHomeLink('#');
-        } else {
-            setHomeLink('/');
-        }
-    }, [location.pathname]);
 
     useEffect(() => {
         const handleOutsideClick = (event: MouseEvent) => {
@@ -51,12 +32,28 @@ const MainRouter: React.FC = () => {
     }, [expanded]);
 
     const handleBrandClick = (event: React.MouseEvent) => {
-        if (homeLink === '#') {
-            event.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        event.preventDefault()
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        navigate('/')
         handleLinkClick();
     };
+
+    const onNavClick = (path: string, elementId: string) => {
+        setExpanded(false);
+        navigate(path);
+
+        const element = document.getElementById(elementId);
+        const navbarHeight = document.querySelector('.custom-navbar')?.clientHeight || 0;
+
+        if (element) {
+            const elementPosition = element.getBoundingClientRect().top + window.screenY;
+            window.scrollTo({
+                top: elementPosition - navbarHeight,
+                behavior: 'smooth'
+            })
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 
     return (
         <>
@@ -68,7 +65,7 @@ const MainRouter: React.FC = () => {
                 expanded={expanded}
                 ref={navbarRef}
             >
-                <Navbar.Brand as={Link} to={homeLink} onClick={handleBrandClick} className='home-link'>
+                <Navbar.Brand as={Link} to='#' onClick={handleBrandClick} className='home-link'>
                     Nikolas Gustavson
                 </Navbar.Brand>
                 <Navbar.Toggle
@@ -76,29 +73,16 @@ const MainRouter: React.FC = () => {
                     onClick={() => setExpanded(!expanded)}
                 />
                 <Navbar.Collapse id='basic-navbar-nav'>
-                    <Nav className="mr-auto nav-bar-collapse w-100 justify-content-between">
-                        <Nav.Link as={Link} to='/' onClick={handleLinkClick} className='nav-link'>Home</Nav.Link>
-                        <Nav.Link as={Link} to='/portfolio' onClick={handleLinkClick} className='nav-link'>Portfolio</Nav.Link>
-                        <Nav.Link as={Link} to='/education' onClick={handleLinkClick} className='nav-link'>Education</Nav.Link>
-                        <Nav.Link as={Link} to='/certifications' onClick={handleLinkClick} className='nav-link'>Certifications</Nav.Link>
-                        <Nav.Link as={Link} to='/basketball' onClick={handleLinkClick} className='nav-link'>Basketball</Nav.Link>
+                    <Nav className="mr-auto nav-bar-collapse">
+                        <Nav.Link onClick={handleBrandClick} className='nav-link'>Home</Nav.Link>
+                        <Nav.Link onClick={() => onNavClick('/portfolio', 'portfolio')} className='nav-link'>Portfolio</Nav.Link>
+                        <Nav.Link onClick={() => onNavClick('/education', 'education')} className='nav-link'>Education</Nav.Link>
+                        <Nav.Link onClick={() => onNavClick('/certifications', 'certifications')} className='nav-link'>Certifications</Nav.Link>
+                        <Nav.Link onClick={() => onNavClick('/basketball', 'basketball')} className='nav-link'>Basketball</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-            <div className='content-wrapper'>
-                <ScrollToTop>
-                    <Routes>
-                        <Route path="/" element={<MainPage />} />
-                        <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/skills" element={<Skills />} />
-                        <Route path="/education" element={<Education />} />
-                        <Route path="/resume" element={<Resume />} />
-                        <Route path="/certifications" element={<Certifications />} />
-                        <Route path="/basketball" element={<Basketball />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                    </Routes>
-                </ScrollToTop>
-            </div>
+            <MainPage />
         </>
     );
 }

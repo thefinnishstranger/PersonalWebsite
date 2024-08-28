@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
+import { Typography } from '@mui/material';
 import '../main.css'
 
 const ContactPage = () => {
@@ -51,22 +52,29 @@ const ContactPage = () => {
 }
 
   return (
-    <form ref={form} onSubmit={sendEmail} className='contactForm'>
-    <div>
-        <label>Name</label>
-        <input type="text" name="user_name" required />
-    </div>
-    <div>
-        <label>Email</label>
-        <input type="email" name="user_email" required />
+    <div id='contact'>
+      <Typography variant='h4' align='center' gutterBottom>
+        Let's Connect!
+      </Typography>
+      <form ref={form} onSubmit={sendEmail} className='contactForm'>
+        <div>
+          <label>Name</label>
+          <input type="text" name="user_name" required />
         </div>
-    <div>
-        <label>Message</label>
-        <textarea name="message" required />
+        <div>
+          <label>Email</label>
+          <input type="email" name="user_email" required />
+        </div>
+        <div>
+          <label>Message</label>
+          <textarea name="message" required style={{ resize: 'none', height: '150px' }} />
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          <input type="submit" value="Send" style={{ width: '100%' }} />
+        </div>
+        <Toaster />
+      </form>
     </div>
-    <input type="submit" value="Send" />
-    <Toaster />
-    </form>
   );
 };
 

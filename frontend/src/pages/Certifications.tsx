@@ -9,6 +9,7 @@ import webDesign from '../resources/webDesign.png';
 import javascript from '../resources/javascript.png';
 import libraries from '../resources/libraries.png';
 import '../main.css'; // Make sure this line is included
+import { Typography } from "@mui/material";
 
 const Certifications: React.FC = () => {
     const fullstackUrl = 'https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/ff5e7da23bf300321a2033ae6f7b11fd';
@@ -27,11 +28,11 @@ const Certifications: React.FC = () => {
     }
 
     return (
-        <Container>
-            <Row className="my-5">
-                <Col>
-                    <h1 className="text-center">My Certifications</h1>
-                </Col>
+        <Container id='certifications'>
+            <Row className="mt-5">
+                <Typography variant='h4' align='center' gutterBottom>
+                My Certifications
+                </Typography>
             </Row>
             <Row>
                 <Col md={4} className="certificate-container">

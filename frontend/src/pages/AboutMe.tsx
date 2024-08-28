@@ -1,4 +1,6 @@
+import { Typography } from '@mui/material'
 import { Container, Row, Col } from 'react-bootstrap'
+import '../main.css'
 
 const AboutMe: React.FC = () => {
 
@@ -6,8 +8,10 @@ const AboutMe: React.FC = () => {
         <Container fluid>
             <Row className="mt-5">
                 <Col md={12} className="text-center">
-                    <h2 className="intro-subtitle">About Me</h2>
-                    <p className="intro-text">
+                    <Typography variant='h4' align='center' gutterBottom>
+                        About Me
+                    </Typography>
+                    <p className="intro-text mt-4">
                         I hail from Helsinki, Finland, and my passion for basketball led me to the U.S. I began my collegiate journey at Eastern Wyoming College and later transferred to the University of North Alabama, and now, the University of Texas at Tyler.
                     </p>
                     <p className="intro-text">
