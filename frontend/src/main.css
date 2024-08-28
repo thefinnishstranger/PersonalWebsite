@@ -66,22 +66,40 @@
         background-color: #fff !important;
         box-shadow: 0 0 0 !important;
     }
+
+    .edu-title {
+        margin-top: -70px !important;
+    }
 }
 
 @media (min-width: 766px) and (max-width: 1200px) {
     .skill-card {
         margin-top: 25px;
     }
-
+    .edu-title {
+        margin-top: -70px !important;
+    }
     .contactForm {
-        background-color: #fff !important;
-        box-shadow: 0 0 0 !important;
+        max-width: 80%;
     }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-    .education-box {
-        margin-top: 0;
+    .edu-title {
+        margin-top: -70px;
+    }
+    .contactForm {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .contactForm {
+        max-width: 50%;
+    }
+
+    .edu-title {
+        margin-top: -70px !important;
     }
 }
   
@@ -144,8 +162,6 @@
 .footer {
     border-top: 1px solid lightgrey;
     box-shadow: 0 4px 8px black;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: #faf4f6
 }
@@ -294,8 +310,7 @@
     }
 }
 
-.contactForm {
-    max-width: 80%;
+.contactForm { 
     margin: 0 auto;
     padding: 20px;
     background: #f9f9f9;

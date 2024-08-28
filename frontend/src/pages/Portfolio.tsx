@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import BlogAppPicture from '../resources/newBlogHub.png';
-import PersonalWebsitePhoto from '../resources/newPersonalWebsitePhoto.png';
+import PersonalWebsitePhoto from '../resources/pwphoto.png';
 import '../main.css';
 import { Typography } from '@mui/material';
 

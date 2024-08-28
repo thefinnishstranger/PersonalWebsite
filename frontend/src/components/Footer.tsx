@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
         <footer className='mt-4 footer'>
             <Container className='py-3 mt-2'>
                 <Row>
-                    <Col md={4}>
+                    <Col md={3} lg={3}>
                         <h5>My contacts:</h5>
                         <p>Email: <a href='mailto:nikolas.gustavson4@gmail.com' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>nikolas.gustavson4@gmail.com</a></p>
                         <p>Phone: <a href='tel:+14304370707' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>+1 (903) 360-4656</a></p>
@@ -78,23 +78,31 @@ const Footer: React.FC = () => {
                             </a>
                         </IconButton>
                     </Col>
-                    <Col md={2} className=''>
+                    <Col md={9} lg={9} className='d-flex justify-content-end'>
+                        <Row>
+                        <Col className=''>
                         <ul className='list-unstyled'>
                             <li><Link to='/' className='linkStyle' onClick={handleBrandClick} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Home</Link></li>
                             <li><Link to='/portfolio' className='linkStyle' onClick={() => onNavClick('/portfolio', 'portfolio')} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Portfolio</Link></li>
                         </ul>
-                    </Col>
-                    <Col md={2} className=''>
+                           </Col>
+                        </Row>
+                        <Row>
+                        <Col className='mx-5'>
                         <ul className='list-unstyled'>
                             <li><Link to='/certifications' className='linkStyle' onClick={() => onNavClick('/certifications', 'certifications')} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Certifications</Link></li>
                             <li><Link to='/education' className='linkStyle' onClick={() => onNavClick('/education', 'education')} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Education</Link></li>
                         </ul>
                     </Col>
-                    <Col md={2} className=''>
+                        </Row>
+                        <Row>
+                        <Col className=''>
                         <ul className='list-unstyled'>
                             <li><Link to='/basketball' className='linkStyle' onClick={() => onNavClick('/basketball', 'basketball')} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Basketball</Link></li>
                             <li><Link to='/contact' className='linkStyle' onClick={() => onNavClick('/contact', 'contact')} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Contact me</Link></li>
                         </ul>
+                    </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Container>

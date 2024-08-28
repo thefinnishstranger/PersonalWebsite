@@ -31,7 +31,7 @@ const EducationEntry = styled(Box)(({ theme }) => ({
 const Education: React.FC = () => {
     return (
         <Container sx={{ mt: 5 }} id='education'>
-            <Typography variant='h4' align='center' gutterBottom>
+            <Typography variant='h4' align='center' gutterBottom className='edu-title'>
                 Education
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3, marginTop: 4 }} className='education-box'>
