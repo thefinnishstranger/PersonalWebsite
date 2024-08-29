@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ksykLogo from '../resources/ksykLogo.png';
-import ewcLogo from '../resources/ewcLogo.jpg';
-import unaLogo from '../resources/unaLogo.png';
-import uttLogo from '../resources/uttLogo.png';
+import ksykLogo from '/ksykLogo.png';
+import ewcLogo from '/ewcLogo.jpg';
+import unaLogo from '/unaLogo.png';
+import uttLogo from '/uttLogo.png';
 import '../main.css' 
 
 const EducationEntry = styled(Box)(({ theme }) => ({

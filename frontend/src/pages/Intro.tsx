@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import profilePicture from '../resources/nikPhoto2.png'
+import profilePicture from '/nikPhoto2.png'
 import '../intro.css';
 import { useNavigate } from "react-router-dom";
 

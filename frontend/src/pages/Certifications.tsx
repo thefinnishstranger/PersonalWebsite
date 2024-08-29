@@ -1,14 +1,14 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
-import fullstack from '../resources/certificate-fullstack-2.png';
-import graphQL from '../resources/certificate-graphql.png';
-import typescript from '../resources/certificate-typescript.png';
-import reactNative from '../resources/certificate-reactnative.png';
-import CI from '../resources/certificate-cicd.png';
-import containers from '../resources/certificate-containers.png';
-import webDesign from '../resources/webDesign.png';
-import javascript from '../resources/javascript.png';
-import libraries from '../resources/libraries.png';
-import '../main.css'; // Make sure this line is included
+import fullstack from '/certificate-fullstack-2.png';
+import graphQL from '/certificate-graphql.png';
+import typescript from '/certificate-typescript.png';
+import reactNative from '/certificate-reactnative.png';
+import CI from '/certificate-cicd.png';
+import containers from '/certificate-containers.png';
+import webDesign from '/webDesign.png';
+import javascript from '/javascript.png';
+import libraries from '/libraries.png';
+import '../main.css';
 import { Typography } from "@mui/material";
 
 const Certifications: React.FC = () => {
