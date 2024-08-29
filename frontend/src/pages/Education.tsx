@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ksykLogo from '../resources/ksykLogo.png';
-import ewcLogo from '../resources/ewcLogo.jpg';
-import unaLogo from '../resources/unaLogo.png';
-import uttLogo from '../resources/uttLogo.png';
+import ksykLogo from '/ksykLogo.png';
+import ewcLogo from '/ewcLogo.jpg';
+import unaLogo from '/unaLogo.png';
+import uttLogo from '/uttLogo.png';
 import '../main.css' 
 
 const EducationEntry = styled(Box)(({ theme }) => ({
@@ -30,18 +30,18 @@ const EducationEntry = styled(Box)(({ theme }) => ({
 
 const Education: React.FC = () => {
     return (
-        <Container sx={{ mt: 8 }}>
-            <Typography variant='h3' align='center' gutterBottom>
+        <Container sx={{ mt: 5 }} id='education'>
+            <Typography variant='h4' align='center' gutterBottom className='edu-title'>
                 Education
             </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3 }} className='education-box'>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3, marginTop: 4 }} className='education-box'>
                 {[
                     {
                         name: "University of Texas at Tyler",
                         location: "Tyler, Texas, USA",
                         years: "2023 - Present",
                         degree: "Bachelor's Degree in Computer Science",
-                        highlights: "Competed as a NCAA Division 2 basketball player, made the President's List, with expected graduation in 2025",
+                        highlights: "Competed as a NCAA Division 2 basketball player, made the President's List, with expected graduation in May 2025",
                         logo: uttLogo,
                     },
                     {

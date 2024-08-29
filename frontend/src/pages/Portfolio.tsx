@@ -1,20 +1,21 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import BlogAppPicture from '../resources/newBlogHub.png';
-import PersonalWebsitePhoto from '../resources/newPersonalWebsitePhoto.png';
+import BlogAppPicture from '/newBlogHub.png';
+import PersonalWebsitePhoto from '/pwphoto.png';
 import '../main.css';
+import { Typography } from '@mui/material';
 
 const blogAppUrl = 'https://bloglistappnikolasfrontend.fly.dev';
 
 const Portfolio: React.FC = () => {
     return (
-        <Container>
-            <Row className="my-5">
-                <Col>
-                    <h1 className="text-center section-title">My Portfolio</h1>
-                </Col>
+        <Container id='portfolio'>
+            <Row className="mt-5">
+                <Typography variant='h4' align='center' gutterBottom>
+                My Portfolio
+                </Typography>
             </Row>
-            <Row>
+            <Row className='mt-4'>
                 <Col md={6} className="mb-4">
                     <Card className="h-100 portfolio-frame">
                         <a href='/' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>

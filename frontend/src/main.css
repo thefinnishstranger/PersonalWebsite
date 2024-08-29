@@ -40,7 +40,7 @@
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
     .intro-container {
         padding: 10px;
     }frontend/src/resources/blogAppPhoto.png
@@ -65,6 +65,41 @@
     .contactForm {
         background-color: #fff !important;
         box-shadow: 0 0 0 !important;
+    }
+
+    .edu-title {
+        margin-top: -70px !important;
+    }
+}
+
+@media (min-width: 766px) and (max-width: 1200px) {
+    .skill-card {
+        margin-top: 25px;
+    }
+    .edu-title {
+        margin-top: -70px !important;
+    }
+    .contactForm {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .edu-title {
+        margin-top: -70px;
+    }
+    .contactForm {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .contactForm {
+        max-width: 50%;
+    }
+
+    .edu-title {
+        margin-top: -70px !important;
     }
 }
   
@@ -127,8 +162,6 @@
 .footer {
     border-top: 1px solid lightgrey;
     box-shadow: 0 4px 8px black;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: #faf4f6
 }
@@ -166,7 +199,7 @@
 }
 
 .custom-navbar .home-link {
-    margin: 10px;
+    margin: 15px;
     color: black;
     transition: transform 0.4s, color 0.4s;
 }
@@ -177,8 +210,10 @@
 }
 
 .nav-bar-collapse {
-    margin-left: 20px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 20px;
 }
 
 .custom-navbar-bg {
@@ -275,8 +310,7 @@
     }
 }
 
-.contactForm {
-    max-width: 600px;
+.contactForm { 
     margin: 0 auto;
     padding: 20px;
     background: #f9f9f9;
@@ -306,11 +340,6 @@
     font-size: 16px;
 }
 
-.contactForm textarea {
-    resize: vertical;
-    height: 150px;
-}
-
 .contactForm input[type="submit"] {
     background-color: #007bff;
     color: white;
@@ -324,4 +353,26 @@
 
 .contactForm input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+
+#portfolio, #certifications, #basketball {
+    padding-top: 80px;
+    margin-top: -70px;
+}
+
+#education {
+    padding-top: 120px;
+    margin-top: -0px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }

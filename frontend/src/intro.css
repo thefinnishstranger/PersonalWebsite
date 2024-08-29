@@ -1,55 +1,156 @@
 .intro-container {
     background-color: #f8f9fa;
     padding: 30px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.intro-header {
-    background-color: #343a40;
-    padding: 20px;
-    border-radius: 15px;
-    margin: 5px !important;
+.intro-text, .tech-stack {
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
 }
 
 .profile-picture {
-    width: 300px !important;
-    height: 300px !important;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.intro-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white !important;
-    margin-bottom: 20px;
-}
-
-.intro-container-text {
-    font-size: 1.1rem;
-    color: #e9ecef;
-    line-height: 1.6;
-    max-width: 600px; 
-    margin: 0 auto; 
-}
-
-.intro-subtitle {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #343a40;
-    margin-bottom: 20px;
-}
-
-.intro-text {
-    font-size: 1.1rem;
-    color: #343a40;
-    line-height: 1.6;
-    max-width: 800px; 
-    margin: 0 auto; 
-}
-
-.basketball-photo {
-    width: 40% !important;
+    width: 90%; 
+    max-width: 500px;
     height: auto;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border: 4px solid black;
+    margin: 0 auto;
+    animation: border-animation 14s infinite ease-in-out;
+}
+
+.tech-logo {
+    font-size: 50px;
+    margin: 10px;
+}
+
+.connect-button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    transition: transform 0.4s;
+}
+
+.connect-button:hover {
+    background-color: aqua;
+    transform: scale(1.05);
+}
+
+.wave-emoji {
+    font-size: 60px;
+}
+
+@keyframes border-animation {
+    0% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+    10% {
+        border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%;
+    }
+    20% {
+        border-radius: 30% 70% 60% 40% / 50% 70% 30% 50%;
+    }
+    30% {
+        border-radius: 50% 50% 70% 30% / 40% 60% 40% 60%;
+    }
+    40% {
+        border-radius: 60% 40% 40% 60% / 70% 30% 50% 50%;
+    }
+    50% {
+        border-radius: 40% 60% 30% 70% / 60% 50% 40% 60%;
+    }
+    60% {
+        border-radius: 50% 50% 50% 50% / 40% 60% 50% 50%;
+    }
+    70% {
+        border-radius: 30% 70% 60% 40% / 60% 40% 70% 30%;
+    }
+    80% {
+        border-radius: 70% 30% 40% 60% / 50% 50% 30% 70%;
+    }
+    90% {
+        border-radius: 60% 40% 50% 50% / 30% 70% 60% 40%;
+    }
+    100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+}
+
+@media (min-width: 2190px) {
+    .intro-text {
+        font-size: 1.0rem;
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+}    
+
+@media (min-width: 1400px) and (max-width: 2189px) {
+    .intro-text {
+        font-size: 1.1rem;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .intro-text {
+        font-size: 1.1rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .skill-card {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 766px) and (max-width: 1200px) {
+    .intro-text, .tech-stack {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 766px) {
+    .intro-text {
+        font-size: 1.25rem;
+    }
+    .tech-stack {
+        font-size: 1rem;
+    }
+    .tech-logo {
+        font-size: 1.5rem;
+        margin: 0 5px;
+    }
+    .profile-picture {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-text {
+        font-size: 1rem;
+    }
+    .tech-stack {
+        font-size: 1rem;
+    }
+    .tech-logo {
+        font-size: 2rem;
+        margin: 0 3px;
+    }
+    .profile-picture {
+        width: 100%;
+        max-width: 300px;
+    }
+    .wave-emoji {
+        font-size: 40px;
+    }
+}
+
+#contact {
+    padding-top: 120px;
+    margin-top: -0px;
 }

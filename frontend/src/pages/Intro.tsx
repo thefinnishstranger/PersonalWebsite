@@ -1,39 +1,52 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import profilePicture from '../resources/nikPhoto.jpeg';
-import basketballPhoto from '../resources/basketballPhoto.jpeg';
-import basketballPhoto1 from '../resources/basketballPhoto1.jpeg';
+import profilePicture from '/nikPhoto2.png'
 import '../intro.css';
+import { useNavigate } from "react-router-dom";
 
 const Intro: React.FC = () => {
+    const navigate = useNavigate();
+
+    const onNavClick = (path: string, elementId: string) => {
+        navigate(path);
+    
+        const element = document.getElementById(elementId);
+        const navbarHeight = document.querySelector('.custom-navbar')?.clientHeight || 0;
+    
+        if (element) {
+            const elementPosition = element.getBoundingClientRect().top + window.screenY;
+            window.scrollTo({
+                top: elementPosition - navbarHeight,
+                behavior: 'smooth'
+            })
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
     return (
-        <Container fluid className="intro-container">
-            <Row className="justify-content-center align-items-center text-center text-light intro-header">
-                <Col md={6} className="mb-4">
-                    <Image src={profilePicture} alt="Nikolas Gustavson" roundedCircle className="profile-picture" />
+        <Container className="intro-container" fluid>
+            <Row className="justify-content-center align-items-center text-center full-height">
+            <Col md={4}>
+                    <Image src={profilePicture} alt="Nikolas Gustavson" className="profile-picture" />
                 </Col>
-                <Col md={6} className="d-flex flex-column justify-content-center">
-                    <h1 className="intro-title">Welcome to My World!</h1>
-                    <p className="intro-container-text">
-                        Hi, I'm Nikolas Gustavson, a student-athlete at the University of Texas at Tyler, majoring in Computer Science. I compete at the NCAA Division 2 level and aim to become a Full Stack Engineer. I’m excited about diving into the tech industry post-graduation.
-                    </p>
-                </Col>
-            </Row>
-            <Row className="mt-5">
-                <Col md={12} className="text-center">
-                    <h2 className="intro-subtitle">About Me</h2>
+                <Col md={8}>
                     <p className="intro-text">
-                        I hail from Helsinki, Finland, and my passion for basketball led me to the U.S. I began my collegiate journey at Eastern Wyoming College and later transferred to the University of North Alabama, and now, the University of Texas at Tyler.
+                        Hello, I am a Full Stack Web Developer <i className="wave-emoji">👋</i>
                     </p>
-                    <p className="intro-text">
-                        After earning my Associate's Degree and discovering my passion for Computer Science, I am now set to graduate with my Bachelor's degree next year. My journey has included working with Java, C++, and more recently, React and Node.js.
-                    </p>
-                    <p className="intro-text">
-                        I'm always eager to learn and embrace new technologies. I look forward to making impactful contributions in the software engineering field.
-                    </p>
-                </Col>
-                <Col md={12} className="d-flex justify-content-center mt-4">
-                    <Image src={basketballPhoto} alt="Nikolas playing basketball" rounded className="basketball-photo mx-2" />
-                    <Image src={basketballPhoto1} alt="Nikolas shooting a basketball" rounded className="basketball-photo mx-2" />
+                    <a onClick={() => onNavClick('/contact', 'contact')} className='nav-link'>
+                        <button className="connect-button">Let's Connect</button>
+                    </a>
+                    <div>
+                        <p className="tech-stack">
+                            My tech stack:
+                        </p>
+                        <i className="devicon-javascript-plain colored tech-logo"></i>
+                        <i className="devicon-typescript-plain colored tech-logo"></i>
+                        <i className="devicon-html5-plain colored tech-logo"></i>
+                        <i className="devicon-css3-plain colored tech-logo"></i>
+                        <i className="devicon-react-original colored tech-logo"></i>
+                        <i className="devicon-reactbootstrap-original colored tech-logo"></i>
+                        <i className="devicon-mongodb-plain colored tech-logo"></i>
+                    </div>
                 </Col>
             </Row>
         </Container>

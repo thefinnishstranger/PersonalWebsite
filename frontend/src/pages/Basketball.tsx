@@ -1,20 +1,26 @@
 import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
-import childhoodPhoto from '../resources/childhoodBasketball.png';
-import childhoodPhoto2 from '../resources/childhoodPhoto2.png';
-import familyPhoto from '../resources/familyPhoto.jpeg';
-import familyPhoto2 from '../resources/andrePhoto.jpg';
-import familyPhoto3 from '../resources/familyPhoto3.png'
-import mukiPhoto from '../resources/mukiPhoto.jpeg';
-import highschoolPhoto2 from '../resources/highschoolPhoto2.png'
-import highschoolPhoto3 from '../resources/highschoolPhoto3.png'
-import collegePhoto from '../resources/collegePhoto.jpeg';
-import collegePhoto2 from '../resources/collegePhoto2.png';
-import collegePhoto3 from '../resources/collegePhoto3.png';
+import { Typography } from '@mui/material';
+import childhoodPhoto from '/childhoodBasketball.png';
+import childhoodPhoto2 from '/childhoodPhoto2.png';
+import familyPhoto from '/familyPhoto.jpeg';
+import familyPhoto2 from '/andrePhoto.jpg';
+import familyPhoto3 from '/familyPhoto3.png'
+import mukiPhoto from '/mukiPhoto.jpeg';
+import highschoolPhoto2 from '/highschoolPhoto2.png'
+import highschoolPhoto3 from '/highschoolPhoto3.png'
+import collegePhoto from '/collegePhoto.jpeg';
+import collegePhoto2 from '/collegePhoto2.png';
+import collegePhoto3 from '/collegePhoto3.png';
 import '../main.css';
 
 const Basketball: React.FC = () => {
     return (
-        <Container>
+        <Container id='basketball'>
+            <Row className="mt-5">
+            <Typography variant='h4' align='center' gutterBottom>
+                Basketball
+            </Typography>
+            </Row>
             <Row>
                 <Col xs={12} md={12} lg={6} className="p-4">
                     <Card className="basketball-card">
