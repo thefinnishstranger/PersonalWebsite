@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
         <footer className='mt-4 footer'>
             <Container className='py-3 mt-2'>
                 <Row>
-                    <Col md={3} lg={3}>
+                    <Col md={4} lg={4}>
                         <h5>My contacts:</h5>
                         <p>Email: <a href='mailto:nikolas.gustavson4@gmail.com' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>nikolas.gustavson4@gmail.com</a></p>
                         <p>Phone: <a href='tel:+14304370707' className='linkStyle' onMouseOver={MouseOver} onMouseLeave={MouseOut}>+1 (903) 360-4656</a></p>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                             </a>
                         </IconButton>
                     </Col>
-                    <Col md={9} lg={9} className='d-flex justify-content-end'>
+                    <Col md={8} lg={8} className='footer-links'>
                         <Row>
                         <Col className=''>
                         <ul className='list-unstyled'>
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                            </Col>
                         </Row>
                         <Row>
-                        <Col className='mx-5'>
+                        <Col className='middle-links'>
                         <ul className='list-unstyled'>
                             <li><Link to='/certifications' className='linkStyle' onClick={() => onNavClick('/certifications', 'certifications')} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Certifications</Link></li>
                             <li><Link to='/education' className='linkStyle' onClick={() => onNavClick('/education', 'education')} onMouseOver={MouseOver} onMouseLeave={MouseOut}>Education</Link></li>
