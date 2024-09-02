@@ -76,8 +76,8 @@ const MainRouter: React.FC = () => {
                     <Nav className="mr-auto nav-bar-collapse">
                         <Nav.Link onClick={handleBrandClick} className='nav-link'>Home</Nav.Link>
                         <Nav.Link onClick={() => onNavClick('/portfolio', 'portfolio')} className='nav-link'>Portfolio</Nav.Link>
-                        <Nav.Link onClick={() => onNavClick('/education', 'education')} className='nav-link'>Education</Nav.Link>
                         <Nav.Link onClick={() => onNavClick('/certifications', 'certifications')} className='nav-link'>Certifications</Nav.Link>
+                        <Nav.Link onClick={() => onNavClick('/education', 'education')} className='nav-link'>Education</Nav.Link>
                         <Nav.Link onClick={() => onNavClick('/basketball', 'basketball')} className='nav-link'>Basketball</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
