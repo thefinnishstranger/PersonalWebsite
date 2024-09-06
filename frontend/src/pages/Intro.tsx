@@ -39,7 +39,6 @@ const Intro: React.FC = () => {
                         <p className="tech-stack">
                             My tech stack:
                         </p>
-                        <i className="devicon-javascript-plain colored tech-logo"></i>
                         <i className="devicon-typescript-plain colored tech-logo"></i>
                         <i className="devicon-html5-plain colored tech-logo"></i>
                         <i className="devicon-css3-plain colored tech-logo"></i>
