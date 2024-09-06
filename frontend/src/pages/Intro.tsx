@@ -46,6 +46,7 @@ const Intro: React.FC = () => {
                         <i className="devicon-react-original colored tech-logo"></i>
                         <i className="devicon-reactbootstrap-original colored tech-logo"></i>
                         <i className="devicon-mongodb-plain colored tech-logo"></i>
+                        <i className="devicon-tailwindcss-original colored tech-logo"></i>
                     </div>
                 </Col>
             </Row>
