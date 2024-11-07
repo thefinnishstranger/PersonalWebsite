@@ -39,13 +39,13 @@ const Intro: React.FC = () => {
                         <p className="tech-stack">
                             My tech stack:
                         </p>
-                        <i className="devicon-javascript-plain colored tech-logo"></i>
                         <i className="devicon-typescript-plain colored tech-logo"></i>
                         <i className="devicon-html5-plain colored tech-logo"></i>
                         <i className="devicon-css3-plain colored tech-logo"></i>
                         <i className="devicon-react-original colored tech-logo"></i>
                         <i className="devicon-reactbootstrap-original colored tech-logo"></i>
                         <i className="devicon-mongodb-plain colored tech-logo"></i>
+                        <i className="devicon-tailwindcss-original colored tech-logo"></i>
                     </div>
                 </Col>
             </Row>
