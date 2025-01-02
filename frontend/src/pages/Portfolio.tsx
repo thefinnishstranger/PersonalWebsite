@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import BlogAppPicture from '/newBlogHub.png';
 import PersonalWebsitePhoto from '/pwphoto.png';
-import BudgetAppPhoto from '/Budget.png'
+import BudgetAppPhoto from '/Budget.png';
 import '../main.css';
 import { Typography } from '@mui/material';
 
@@ -17,32 +17,30 @@ const Portfolio: React.FC = () => {
                 </Typography>
             </Row>
             <Row className='mt-4'>
-            <Col md={6} className="mb-4">
-    <Card className="h-100 portfolio-frame">
-    <Card.Img variant="top" src={BudgetAppPhoto} alt='blog app' />
-        <a href="https://frontend-young-snow-8341.fly.dev/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
-            <Card.Body>
-                <Card.Title>Budget App</Card.Title>
-                <div>
-                    <p>
-                        My Budget App is a powerful tool for managing your finances. It allows you to calculate your budget, adjust it to your preferences, and input your expenses to keep track of them. 
-                        The frontend is built with <strong>TypeScript</strong> and <strong>React</strong>, while the backend leverages <strong>Node.js</strong>, <strong>Docker</strong>, and other scalable technologies.
-                    </p>
-                    <p>
-                        Through this project, I enhanced my skills in front-end development, back-end integration, and full-stack deployment. Working on this app taught me how to:
-                    </p>
-                    <ul>
-                        <li>Build a responsive user interface with React and TypeScript.</li>
-                        <li>Develop scalable back-end services using Node.js and Docker.</li>
-                        <li>Integrate front-end and back-end systems seamlessly for real-time data management.</li>
-                        <li>Deploy applications efficiently using modern DevOps tools.</li>
-                    </ul>
-                </div>
-            </Card.Body>
-        </a>
-    </Card>
-</Col>
-
+                <Col md={6} className="mb-4">
+                    <Card className="h-100 portfolio-frame">
+                        <a href='/' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Card.Img variant="top" src={PersonalWebsitePhoto} alt='personal website' />
+                            <Card.Body>
+                                <Card.Title>My Personal Website</Card.Title>
+                                <div>
+                                    <p>
+                                        This website that you're on right now was built by me from scratch using React.js, TypeScript, and Docker. I decided to make this frontend only as utilizing a backend for this website would not be necessary. The development process included:
+                                    </p>
+                                    <ul>
+                                        <li>Utilizing TypeScript and React for robust and maintainable code.</li>
+                                        <li>Employing Docker for containerization, ensuring consistency across different environments.</li>
+                                        <li>Integrating React-Bootstrap and Material-UI for a responsive and modern design.</li>
+                                        <li>Setting up GitHub Workflows for continuous integration and deployment, ensuring seamless updates and maintenance.</li>
+                                    </ul>
+                                    <p>
+                                        This project helped me enhance my skills in modern web development tools and frameworks, responsive design, and user experience.
+                                    </p>
+                                </div>
+                            </Card.Body>
+                        </a>
+                    </Card>
+                </Col>
                 <Col md={6} className="mb-4">
                     <Card className="h-100 portfolio-frame">
                         <a href={blogAppUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
@@ -69,32 +67,33 @@ const Portfolio: React.FC = () => {
                 </Col>
             </Row>
             <Row>
-            <Col md={6} className="mb-4">
-                    <Card className="h-100 portfolio-frame">
-                        <a href='/' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
-                            <Card.Img variant="top" src={PersonalWebsitePhoto} alt='personal website' />
-                            <Card.Body>
-                                <Card.Title>My Personal Website</Card.Title>
-                                <div>
-                                    <p>
-                                        This website that you're on right now was built by me from scratch using React.js, TypeScript, and Docker. I decided to make this frontend only as utilizing a backend for this website would not be necessary. The development process included:
-                                    </p>
-                                    <ul>
-                                        <li>Utilizing TypeScript and React for robust and maintainable code.</li>
-                                        <li>Employing Docker for containerization, ensuring consistency across different environments.</li>
-                                        <li>Integrating React-Bootstrap and Material-UI for a responsive and modern design.</li>
-                                        <li>Setting up GitHub Workflows for continuous integration and deployment, ensuring seamless updates and maintenance.</li>
-                                    </ul>
-                                    <p>
-                                        This project helped me enhance my skills in modern web development tools and frameworks, responsive design, and user experience.
-                                    </p>
-                                </div>
-                            </Card.Body>
-                        </a>
-                    </Card>
-                </Col>
                 <Col md={6} className="mb-4">
-                    <Card className="h-100 portfolio-frame">
+    <Card className="h-auto portfolio-frame">
+    <a href="https://frontend-young-snow-8341.fly.dev/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+        <Card.Img variant="top" src={BudgetAppPhoto} alt='budget app' />
+        <Card.Body>
+            <Card.Title>Budget App</Card.Title>
+            <div>
+                <p>
+                    My Budget App is a powerful tool for managing your finances. It allows you to calculate your budget, adjust it to your preferences, and input your expenses to keep track of them. 
+                    The frontend is built with TypeScript and React, while the backend leverages Node.js, Docker, and other scalable technologies.
+                </p>
+                <p>
+                    Through this project, I enhanced my skills in front-end development, back-end integration, and full-stack deployment. Working on this app taught me how to:
+                </p>
+                <ul>
+                    <li>Build a responsive user interface with React and TypeScript.</li>
+                    <li>Develop scalable back-end services using Node.js and Docker.</li>
+                    <li>Integrate front-end and back-end systems seamlessly for real-time data management.</li>
+                    <li>Deploy applications efficiently using modern DevOps tools.</li>
+                </ul>
+            </div>
+        </Card.Body>
+        </a>
+    </Card>
+</Col>
+                <Col md={6} className="mb-4">
+                    <Card className="h-auto portfolio-frame">
                         <a href='https://github.com/thefinnishstranger' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}> 
                             <Card.Body>
                                 <Card.Title>Other Small Projects</Card.Title>
@@ -116,6 +115,7 @@ const Portfolio: React.FC = () => {
                         </a>
                     </Card>
                 </Col>
+                
             </Row>
         </Container>
     );

@@ -391,3 +391,10 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+.portfolio-img {
+    width: 100%; /* Ensures the image spans the width of the Card */
+    height: 200px; /* Set a fixed height for consistent sizing */
+    object-fit: cover; /* Ensures the image scales and crops proportionally */
+  }
+  
