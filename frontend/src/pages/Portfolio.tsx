@@ -1,12 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import BlogAppPicture from '/newBlogHub.png';
-import PersonalWebsitePhoto from '/pwphoto.png';
-import BudgetAppPhoto from '/Budget.png';
 import '../main.css';
 import { Typography } from '@mui/material';
-
-const blogAppUrl = 'https://bloglistappnikolasfrontend.fly.dev';
 
 const Portfolio: React.FC = () => {
     return (
