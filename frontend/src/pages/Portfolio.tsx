@@ -20,7 +20,7 @@ const Portfolio: React.FC = () => {
                 <Col md={6} className="mb-4">
                     <Card className="h-100 portfolio-frame">
                         <a href='/' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
-                            <Card.Img variant="top" src={PersonalWebsitePhoto} alt='personal website' />
+                            <Card.Img variant="top" src="https://ik.imagekit.io/izozi8aoz/pwphoto.png?updatedAt=1736030218315" alt='personal website' />
                             <Card.Body>
                                 <Card.Title>My Personal Website</Card.Title>
                                 <div>
@@ -43,7 +43,7 @@ const Portfolio: React.FC = () => {
                 </Col>
                 <Col md={6} className="mb-4">
                     <Card className="h-100 portfolio-frame">
-                        <a href={blogAppUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+                        <a href="https://ik.imagekit.io/izozi8aoz/newBlogHub.png?updatedAt=1736030213329" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
                             <Card.Img variant="top" src={BlogAppPicture} alt='blog app' />
                             <Card.Body>
                                 <Card.Title>Blog App</Card.Title>
@@ -70,7 +70,7 @@ const Portfolio: React.FC = () => {
                 <Col md={6} className="mb-4">
     <Card className="h-auto portfolio-frame">
     <a href="https://frontend-young-snow-8341.fly.dev/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
-        <Card.Img variant="top" src={BudgetAppPhoto} alt='budget app' />
+        <Card.Img variant="top" src="https://ik.imagekit.io/izozi8aoz/Budget.png?updatedAt=1736193802985" alt='budget app' />
         <Card.Body>
             <Card.Title>Budget App</Card.Title>
             <div>

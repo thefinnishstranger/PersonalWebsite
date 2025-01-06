@@ -26,7 +26,7 @@ const Intro: React.FC = () => {
         <Container className="intro-container" fluid>
             <Row className="justify-content-center align-items-center text-center full-height">
             <Col md={4}>
-                    <Image src={profilePicture} alt="Nikolas Gustavson" className="profile-picture" />
+                    <Image src="https://ik.imagekit.io/izozi8aoz/nikPhoto2.png?updatedAt=1736030267537" alt="Nikolas Gustavson" className="profile-picture" />
                 </Col>
                 <Col md={8}>
                     <p className="intro-text">
