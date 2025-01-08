@@ -39,8 +39,8 @@ const Portfolio: React.FC = () => {
                 </Col>
                 <Col md={6} className="mb-4">
                     <Card className="h-100 portfolio-frame">
-                        <a href="https://ik.imagekit.io/izozi8aoz/newBlogHub.png?updatedAt=1736030213329" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
-                            <Card.Img variant="top" src={BlogAppPicture} alt='blog app' />
+                        <a href="https://bloglistappnikolasfrontend.fly.dev" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Card.Img variant="top" src="https://ik.imagekit.io/izozi8aoz/newBlogHub.png?updatedAt=1736030213329" alt='blog app' />
                             <Card.Body>
                                 <Card.Title>Blog App</Card.Title>
                                 <div>
